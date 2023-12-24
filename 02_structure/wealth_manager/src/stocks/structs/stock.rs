@@ -1,3 +1,5 @@
+use super::utils::constructor_shout;
+
 pub struct Stock {
     pub name: String,
     pub open_price: f32,
@@ -8,6 +10,7 @@ pub struct Stock {
 
 impl Stock {
     pub fn new(stock_name: &str, price: f32) -> Stock {
+        constructor_shout(stock_name);
         return Stock {
             name: String::from(stock_name),
             open_price: price,
